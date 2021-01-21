@@ -1,0 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    display: flex;
+    padding: 0.5rem 1rem;
+    background-color: sandybrown;
+    align-items: center;
+    justify-content: space-between;
+}

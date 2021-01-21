@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--input - select - texarea-->
+
+    <!-- <input id="check" type="checkbox" value="acepto">
+    <input id="radio" type="radio">
+    <input id="archivo" type="file">
+    <select id="opciones">
+        <option value="1">Argentina</option>
+        <option value="2">Uruguay</option>
+        <option value="3">Brasil</option>
+    </select> -->
+
+    <form>
+        <div>
+            <input type="text" name="nombre" placeholder="Nombre...">
+            <p id="error_nombre"></p>
+        </div>
+        <div>
+            <input type="email" name="email" placeholder="Email...">
+            <p id="error_email"></p>
+        </div>
+        <div>
+            <textarea name="comentario" placeholder="Comentario..."></textarea>
+            <p id="error_comentario"></p>
+        </div>
+        <button>guardar</button>
+    </form>
+    <script src="validator.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
