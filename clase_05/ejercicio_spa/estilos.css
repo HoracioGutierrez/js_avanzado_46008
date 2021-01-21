@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body {
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: rgb(71, 122, 163);
+    box-shadow: 0 2px 8px rgba(0, 0,0,0.4);
+}
+
+header nav a {
+    margin-left: 1rem;
+}
+
+main {
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+footer {
+    background-color: rgb(71, 122, 163);
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+}
