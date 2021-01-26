@@ -29,10 +29,20 @@ xhr.addEventListener("load",()=>{
             document.body.appendChild(p)
 
             p.addEventListener("click",()=>{
-                console.log("Click")
-                console.log(usuario.id)
+                //console.log("Click")
+                //console.log(usuario.id)
                 document.body.innerHTML = ""
                 history.pushState(usuario.id,null,"usuarios/"+usuario.id)
+
+                const xhr_posteos = new XMLHttpRequest
+                xhr_posteos.open("GET","https://jsonplaceholder.typicode.com/posts")
+                xhr_posteos.addEventListener("load",()=>{
+                    if(xhr_posteos.status == 200){
+
+                    }
+                })
+                xhr_posteos.send()
+
             })
 
         })
