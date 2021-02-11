@@ -1,0 +1,31 @@
+https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/
+
+Dynamic-Import
+
+
+NPM -> script -> Webpack -> loader -> Babel -> output 
+
+
+
+Dependencias : webpack webpack-dev-server @babel/core babel-loader
+
+
+NPM (Node Package Manager) 
+config : package.json
+
+npm {i|install} [flag] <paquete>
+
+
+--save|-S : default 
+--save-dev|-D
+-g
+
+
+
+WEBPACK (budler)
+config : webpack.config.js
+default : root/src/index.js
+
+
+BABEL (Transpilador)
+config : .babelrc

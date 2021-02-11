@@ -1,0 +1,18 @@
+{
+  "name": "clase_10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "archivo_1.js",
+  "scripts": {
+    "servidor": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0"
+  }
+}
