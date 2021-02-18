@@ -1,4 +1,5 @@
 https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/
+https://www.npmjs.com/package/npm-run-all
 
 Dynamic-Import
 
@@ -29,3 +30,8 @@ default : root/src/index.js
 
 BABEL (Transpilador)
 config : .babelrc
+
+
+
+WebSockets
+

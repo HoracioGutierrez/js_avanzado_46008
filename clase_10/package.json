@@ -4,15 +4,29 @@
   "description": "",
   "main": "archivo_1.js",
   "scripts": {
-    "servidor": "webpack"
+    "compilarfront": "webpack --config webpack.front.js",
+    "compilarback": "webpack --config webpack.back.js",
+    "compilar": "webpack",
+    "servidor": "webpack serve"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.16",
     "babel-loader": "^8.2.2",
+    "cors": "^2.8.5",
+    "css-loader": "^5.0.2",
+    "express": "^4.17.1",
+    "html-webpack-plugin": "^4.5.2",
+    "mini-css-extract-plugin": "^1.3.7",
+    "socket.io": "^3.1.1",
+    "style-loader": "^2.0.0",
     "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.2"
   }
 }

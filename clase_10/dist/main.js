@@ -15,7 +15,7 @@
   \**************************/
 /***/ ((module) => {
 
-eval("//(function(console,__dirname,__filename,global,process,exports,module,...etc){\nconst a = 1;\nconst b = 2; //console.log(__dirname)\n//console.log(__filename)\n//console.log(process.env)\n//console.log(module)\n//CommonJS\n//exports.suma = a +b\n//module.exports.suma = a + b\n//exports = a + b\n\nmodule.exports = a + b; //Es6\n//export default a+b\n//})()\n\n//# sourceURL=webpack://clase_10/./src/archivo_1.js?");
+eval("//(function(console,__dirname,__filename,global,process,exports,module,...etc){\nvar a = 1;\nvar b = 2; //console.log(__dirname)\n//console.log(__filename)\n//console.log(process.env)\n//console.log(module)\n//CommonJS\n//exports.suma = a +b\n//module.exports.suma = a + b\n//exports = a + b\n\nmodule.exports = a + b; //Es6\n//export default a+b\n//})()\n\n//# sourceURL=webpack://clase_10/./src/archivo_1.js?");
 
 /***/ }),
 
@@ -26,7 +26,18 @@ eval("//(function(console,__dirname,__filename,global,process,exports,module,...
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _archivo_1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./archivo_1 */ \"./src/archivo_1.js\");\n/* harmony import */ var _archivo_1__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_archivo_1__WEBPACK_IMPORTED_MODULE_0__);\n//require(\"./archivo_1\")\n\n\nclass App {}\n\nlet foo = () => {};\n\nconst arr = [1, 2, 3];\ncons[(uno, dos, tres)] = arr;\nconst copia = [...arr];\n\n//# sourceURL=webpack://clase_10/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _archivo_1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./archivo_1 */ \"./src/archivo_1.js\");\n/* harmony import */ var _archivo_1__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_archivo_1__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _estilos_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./estilos.css */ \"./src/estilos.css\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n//require(\"./archivo_1\")\n\n\n\nvar App = function App() {\n  _classCallCheck(this, App);\n};\n\nvar foo = function foo() {};\n\nvar arr = [1, 2, 3];\nvar uno = arr[0],\n    dos = arr[1],\n    tres = arr[2];\nvar copia = [].concat(arr);\nconsole.log(\"Dev Server\");\n\n//# sourceURL=webpack://clase_10/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/estilos.css":
+/*!*************************!*\
+  !*** ./src/estilos.css ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://clase_10/./src/estilos.css?");
 
 /***/ })
 
