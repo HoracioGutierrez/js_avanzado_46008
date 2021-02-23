@@ -8,6 +8,10 @@ const io = require('socket.io')(app,{
     }
 })
 
+server.get("/",(req,res)=>{
+    res.sendFile(__dirname+"/dist/index.html")
+})
+
 io.on("connection",socket=>{
     
     console.log("Se conecto un nuevo socket",socket.id)

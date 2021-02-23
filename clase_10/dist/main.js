@@ -1,23 +1,6 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
-
-/***/ "./src/archivo_1.js":
-/*!**************************!*\
-  !*** ./src/archivo_1.js ***!
-  \**************************/
-/***/ ((module) => {
-
-eval("//(function(console,__dirname,__filename,global,process,exports,module,...etc){\nvar a = 1;\nvar b = 2; //console.log(__dirname)\n//console.log(__filename)\n//console.log(process.env)\n//console.log(module)\n//CommonJS\n//exports.suma = a +b\n//module.exports.suma = a + b\n//exports = a + b\n\nmodule.exports = a + b; //Es6\n//export default a+b\n//})()\n\n//# sourceURL=webpack://clase_10/./src/archivo_1.js?");
-
-/***/ }),
 
 /***/ "./src/index.js":
 /*!**********************!*\
@@ -25,8 +8,41 @@ eval("//(function(console,__dirname,__filename,global,process,exports,module,...
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _archivo_1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./archivo_1 */ \"./src/archivo_1.js\");\n/* harmony import */ var _archivo_1__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_archivo_1__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _estilos_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./estilos.css */ \"./src/estilos.css\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n//require(\"./archivo_1\")\n\n\n\nvar App = function App() {\n  _classCallCheck(this, App);\n};\n\nvar foo = function foo() {};\n\nvar arr = [1, 2, 3];\nvar uno = arr[0],\n    dos = arr[1],\n    tres = arr[2];\nvar copia = [].concat(arr);\nconsole.log(\"Dev Server\");\n\n//# sourceURL=webpack://clase_10/./src/index.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _estilos_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./estilos.css */ "./src/estilos.css");
+//require("./archivo_1")
+
+/* import archivo1 from "./archivo_1" */
+
+/* class App {}
+
+let foo =  () => {}
+
+const arr = [1,2,3]
+const [uno,dos,tres] = arr
+
+const copia = [...arr]
+
+console.log("Dev Server") */
+
+var socket = io("ws://localhost:8000");
+var form = document.querySelector("form");
+var ul = document.querySelector("ul");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  var valor = e.target.elements.mensaje.value;
+  var li = document.createElement("li");
+  li.innerText = valor;
+  ul.appendChild(li);
+  e.target.elements.mensaje.value = "";
+  socket.emit("mensaje_front", valor);
+});
+socket.on("mensaje_back", function (mensaje) {
+  console.log(mensaje);
+  var li = document.createElement("li");
+  li.innerText = mensaje;
+  ul.appendChild(li);
+});
 
 /***/ }),
 
@@ -36,8 +52,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _arc
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://clase_10/./src/estilos.css?");
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ })
 
@@ -67,35 +84,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -114,3 +102,4 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;
+//# sourceMappingURL=main.js.map
